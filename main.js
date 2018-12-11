@@ -6,7 +6,8 @@ let currentGeneration = readline("enter the current generation co-ordinates: ");
 let bounds = readline("enter the bounds: ");
 
 currentGeneration = currentGeneration.split(" ").map((x)=>x.split(",").map((y)=>+y));
-bounds = JSON.parse(bounds);
+bounds = bounds.split(" ").map((x)=>x.split(",").map((y)=>+y));
+bounds = {"topLeft":bounds[0],"bottomRight":bounds[1]};
 
 const main = function() {
   console.clear();
