@@ -1,5 +1,6 @@
 let horizontalCharacter = String.fromCharCode(9473);
 let verticalCharacter = String.fromCharCode(9475);
+
 const initialGrid = function(height,width) {
   let grid = new Array(width).fill(height).map(x => new Array(x).fill(" "));
   return grid;

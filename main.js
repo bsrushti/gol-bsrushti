@@ -5,7 +5,7 @@ const { printBoard } = require('./src/util.js');
 let currentGeneration = readline("enter the current generation co-ordinates: ");
 let bounds = readline("enter the bounds: ");
 
-currentGeneration = JSON.parse(currentGeneration);
+currentGeneration = currentGeneration.split(" ").map((x)=>x.split(",").map((y)=>+y));
 bounds = JSON.parse(bounds);
 
 const main = function() {
